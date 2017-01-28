@@ -51,7 +51,7 @@ ZSH_THEME="bira"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git powerline brew osx npm tmux zsh-syntax-highlighting zsh-navigation-tools history-substring-search)
+plugins=(git powerline npm tmux zsh-syntax-highlighting zsh-navigation-tools history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
