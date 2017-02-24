@@ -1,0 +1,20 @@
+[user]
+	name = Benjamin Winger
+[push]
+	default = simple
+[Alias]
+	purr = pull --rebase
+	f = fetch
+	a = add -p
+	lol = log --pretty='%C(auto)%h %<(12,trunc)%an (%>(13)%cr) %s' --abbrev-commit --graph --decorate --color
+	d = diff
+	co = checkout
+	cob = checkout -b
+	cm = commit -m
+	s = status -s
+	st = status
+	g = grep -n --break
+	lop = log -p --follow
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
