@@ -14,7 +14,7 @@ ZSH_THEME="bira"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -78,3 +78,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 
 bindkey -v
+
+setopt append_history inc_append_history_time no_share_history
