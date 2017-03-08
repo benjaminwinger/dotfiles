@@ -17,4 +17,4 @@
 	lop = log -p --follow
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.globalgitignore
