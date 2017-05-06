@@ -50,6 +50,12 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'triglav/vim-visual-increment'
 Plugin 'haya14busa/git-mergetool-vimdiff-wrapper'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'vim-scripts/AutoAlign'
+Plugin 'vim-scripts/lua.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'wookiehangover/jshint.vim'
+Plugin 'lervag/vimtex'
+Plugin 'vim-scripts/gdbvim'
 call vundle#end()
 
 filetype plugin indent on
@@ -152,8 +158,8 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-"set ai "Auto indent
-"set si "Smart indent
+set ai "Auto indent
+set si "Smart indent
 set wrap "Wrap lines
 
 """"""""""""""""""""""""""""""
@@ -312,3 +318,39 @@ function! DoPrettyXML()
   exe "set ft=" . l:origft
 endfunction
 command! PrettyXML call DoPrettyXML()
+
+" Sets how many lines of history VIM has to remember
+set history=700
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw
+
+" Colors of CtrlSpace for Solarized Dark
+" (MacVim and Console Vim under iTerm2 with Solarized Dark theme)
+
+" Based on Solarized TablineSel
+hi CtrlSpaceSelected guifg=#586e75 guibg=#eee8d5 guisp=#839496 gui=reverse,bold ctermfg=10 ctermbg=7 cterm=reverse,bold
+
+" Based on Solarized Tabline/TablineFill
+" original Normal
+" hi CtrlSpaceNormal   guifg=#839496 guibg=#073642 guisp=#839496 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
+" tweaked Normal with darker background in Gui
+hi CtrlSpaceNormal   guifg=#839496 guibg=#021B25 guisp=#839496 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
+
+" Based on Title
+hi CtrlSpaceSearch   guifg=#cb4b16 guibg=NONE gui=bold ctermfg=9 ctermbg=NONE term=bold cterm=bold
+
+" Based on PmenuThumb
+hi CtrlSpaceStatus   guifg=#839496 guibg=#002b36 gui=reverse term=reverse cterm=reverse ctermfg=12 ctermbg=8
+
+let g:ctrlspace_use_tabline=1
+filetype plugin on
+let g:livepreview_previewer = 'okular'
+autocmd FileType tex setlocal makeprg=latexmk -view=pdf\ --shell-escape\ '%'
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
+let g:vimtex_view_general_options_latexmk = '--unique'
+
