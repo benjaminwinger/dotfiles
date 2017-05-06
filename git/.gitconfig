@@ -23,6 +23,7 @@
 [core]
 	editor = vim
 	excludesfile = ~/.globalgitignore
+	whitespace = trailing-space,space-before-tab,indent-with-non-tab
 [color]
         status = auto
         branch = auto
