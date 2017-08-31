@@ -1,67 +1,65 @@
 [user]
-	name = Benjamin Winger
-	email = winger.benjamin@gmail.com
+    name = Benjamin Winger
+    email = winger.benjamin@gmail.com
 [push]
-	default = simple
-[Alias]
-	purr = pull --rebase
-	f = fetch
-	a = add -p
-	lol = log --pretty='%C(auto)%h %<(12,trunc)%an (%>(13)%cr) %s' --abbrev-commit --graph --decorate --color
-	d = diff
-	co = checkout
-	cob = checkout -b
-	cm = commit -m
-	s = status -s
-	st = status
-	g = grep -n --break
-	lop = log -p --follow
-	ci = commit
-	br = branch
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    default = simple
+[Alias]i
+    purr = pull --rebase
+    f = fetch
+    a = add -p
+    lol = log --pretty='%C(auto)%h %<(12,trunc)%an (%>(13)%cr) %s' --abbrev-commit --graph --decorate --color
+    d = diff
+    co = checkout
+    cob = checkout -b
+    cm = commit -m
+    s = status -s
+    st = status
+    g = grep -n --break
+    lop = log -p --follow
+    ci = commit
+    br = branch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     graph = log --graph --full-history --date-order --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
 [core]
-	editor = vim
-	excludesfile = ~/.globalgitignore
-	whitespace = trailing-space,space-before-tab,indent-with-non-tab
+    editor = vim
+    excludesfile = ~/.globalgitignore
+    whitespace = trailing-space,space-before-tab,indent-with-non-tab,fix
+    autoclrf = true
 [color]
-        status = auto
-        branch = auto
-        ui     = true
+     status = auto
+    branch = auto
+    ui     = true
 [diff]
-        color = auto
+    color = auto
 [pager]
-        color = true
+    color = true
 [status]
-        color = auto
+    color = auto
 [color "branch"]
-        current = yellow reverse
-        local = yellow
-        remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 [color "diff"]
-        meta = yellow bold
-        frag = magenta bold
-        old = red bold
-        new = green bold
-        whitespace = red reverse
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
 [color "status"]
-        added = green
-        changed = red
-        untracked = cyan
-[core]
-    whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	editor = vim
+    added = green
+    changed = red
+    untracked = cyan
 
 [push]
-	default = simple
+    default = simple
 [github]
-	user = github benjaminwinger
+    user = github benjaminwinger
 [merge]
-	tool = myvimdiff
+    tool = myvimdiff
 [mergetool "diffconflicts"]
-	cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
-	trustExitCode = true
+    cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
+    trustExitCode = true
 [mergetool]
-	keepBackup = false
+    keepBackup = false
 [mergetool "myvimdiff"]
-	cmd = myvimdiff \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+    cmd = myvimdiff \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
