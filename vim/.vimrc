@@ -56,6 +56,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'wookiehangover/jshint.vim'
 Plugin 'lervag/vimtex'
 Plugin 'vim-scripts/gdbvim'
+Plugin 'abadcafe/ctage_cache'
 call vundle#end()
 
 filetype plugin indent on
