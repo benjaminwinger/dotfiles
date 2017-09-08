@@ -56,7 +56,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'wookiehangover/jshint.vim'
 Plugin 'lervag/vimtex'
 Plugin 'vim-scripts/gdbvim'
-Plugin 'abadcafe/ctage_cache'
+Plugin 'abadcafe/ctags_cache'
+Plugin 'sheerun/vim-polyglot'
 call vundle#end()
 
 filetype plugin indent on
@@ -350,8 +351,9 @@ hi CtrlSpaceStatus   guifg=#839496 guibg=#002b36 gui=reverse term=reverse cterm=
 let g:ctrlspace_use_tabline=1
 filetype plugin on
 let g:livepreview_previewer = 'okular'
-autocmd FileType tex setlocal makeprg=latexmk -view=pdf\ --shell-escape\ '%'
+autocmd FileType tex setlocal makeprg=latexmk\ -view=pdf
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
 
+let g:polyglot_disabled = ['tex'] " disabled since this is handled by vimtex
